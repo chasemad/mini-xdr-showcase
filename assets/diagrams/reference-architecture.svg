@@ -1,56 +1,127 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
   <title id="title">Mini-XDR Reference Architecture</title>
   <desc id="desc">High-level platform architecture for AI-assisted detection, investigation, and governed response.</desc>
   <defs>
-    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
-      <path d="M0 0 L12 6 L0 12 Z" fill="#94a3b8"/>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M0 0 L12 6 L0 12 Z" fill="#9aa8bb"/>
+    </marker>
+    <marker id="green-arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M0 0 L12 6 L0 12 Z" fill="#38e795"/>
     </marker>
     <style>
-      .bg{fill:#070d1a}.title{font:700 46px Inter,Arial,sans-serif;fill:#f3f7ff}.sub{font:24px Inter,Arial,sans-serif;fill:#b9c4d6}
-      .panel{fill:#101827;stroke:#49617f;stroke-width:1.2}.box{fill:#101827;stroke-width:3}.cyan{stroke:#18d7e6}.blue{stroke:#28aef7}.purple{stroke:#a65cf4}.green{stroke:#34df8e}.yellow{stroke:#ffc21a}.red{stroke:#ff5570}
-      .label{font:700 20px Inter,Arial,sans-serif;fill:#b9c4d6;letter-spacing:1px}.head{font:700 24px Inter,Arial,sans-serif;fill:#f3f7ff}.body{font:20px Inter,Arial,sans-serif;fill:#bdc8da}
-      .arrow{stroke:#94a3b8;stroke-width:4;fill:none;marker-end:url(#arrow)}.greenarrow{stroke:#34df8e;stroke-width:4;fill:none;marker-end:url(#arrow)}.foot{font:16px Inter,Arial,sans-serif;fill:#aab6c8}
+      .bg{fill:#070d1a}
+      .title{font:700 56px Inter,Arial,sans-serif;fill:#f3f7ff}
+      .sub{font:26px Inter,Arial,sans-serif;fill:#b9c4d6}
+      .panel{fill:#101827;stroke:#50698a;stroke-width:1.35}
+      .box{fill:#101827;stroke-width:4}
+      .cyan{stroke:#18d7e6}
+      .blue{stroke:#28aef7}
+      .purple{stroke:#a65cf4}
+      .green{stroke:#34df8e}
+      .yellow{stroke:#ffc21a}
+      .red{stroke:#ff5570}
+      .label{font:700 24px Inter,Arial,sans-serif;fill:#b9c4d6;letter-spacing:2px}
+      .head{font:700 28px Inter,Arial,sans-serif;fill:#f3f7ff}
+      .body{font:22px Inter,Arial,sans-serif;fill:#bdc8da}
+      .arrow{stroke:#9aa8bb;stroke-width:4;fill:none;marker-end:url(#arrow)}
+      .greenarrow{stroke:#38e795;stroke-width:4;fill:none;marker-end:url(#green-arrow)}
+      .foot{font:16px Inter,Arial,sans-serif;fill:#aab6c8}
     </style>
   </defs>
-  <rect class="bg" width="1600" height="900"/>
-  <text class="title" x="60" y="86">Mini-XDR Reference Architecture</text>
-  <text class="sub" x="60" y="120">High-level platform architecture for AI-assisted detection, investigation, and governed response</text>
 
-  <rect class="panel" x="42" y="176" width="276" height="292" rx="22"/>
-  <text class="label" x="62" y="210">TELEMETRY SOURCES</text>
-  <rect class="box cyan" x="80" y="255" width="200" height="68" rx="18"/><text class="head" x="180" y="292" text-anchor="middle">Endpoint</text><text class="body" x="180" y="318" text-anchor="middle">EDR / host logs</text>
-  <rect class="box cyan" x="80" y="347" width="200" height="68" rx="18"/><text class="head" x="180" y="384" text-anchor="middle">Cloud</text><text class="body" x="180" y="410" text-anchor="middle">AWS / Azure logs</text>
-  <rect class="box cyan" x="80" y="439" width="200" height="68" rx="18"/><text class="head" x="180" y="476" text-anchor="middle">Identity</text><text class="body" x="180" y="502" text-anchor="middle">Auth / IAM events</text>
+  <rect class="bg" width="1920" height="1080"/>
 
-  <rect class="panel" x="360" y="176" width="252" height="292" rx="22"/>
-  <text class="label" x="380" y="210">INGESTION</text>
-  <rect class="box blue" x="395" y="285" width="184" height="74" rx="18"/><text class="head" x="487" y="326" text-anchor="middle">Collectors</text><text class="body" x="487" y="356" text-anchor="middle">OTel collectors</text>
-  <rect class="box blue" x="395" y="397" width="184" height="74" rx="18"/><text class="head" x="487" y="438" text-anchor="middle">Normalize</text><text class="body" x="487" y="468" text-anchor="middle"><tspan x="487">OCSF mapping</tspan><tspan x="487" dy="24">Enrichment</tspan></text>
+  <text class="title" x="72" y="100">Mini-XDR Reference Architecture</text>
+  <text class="sub" x="72" y="141">High-level platform architecture for AI-assisted detection, investigation, and governed response</text>
 
-  <rect class="panel" x="654" y="176" width="302" height="292" rx="22"/>
-  <text class="label" x="674" y="210">DATA PLANE</text>
-  <rect class="box purple" x="692" y="244" width="235" height="68" rx="18"/><text class="head" x="810" y="281" text-anchor="middle">Event Bus</text><text class="body" x="810" y="307" text-anchor="middle">Kafka / Redpanda</text>
-  <rect class="box purple" x="692" y="336" width="235" height="68" rx="18"/><text class="head" x="810" y="373" text-anchor="middle">Hot Analytics</text><text class="body" x="810" y="399" text-anchor="middle">ClickHouse / OpenSearch</text>
-  <rect class="box purple" x="692" y="428" width="235" height="68" rx="18"/><text class="head" x="810" y="465" text-anchor="middle">Knowledge Graph</text><text class="body" x="810" y="491" text-anchor="middle">Assets, users, threats</text>
+  <rect class="panel" x="50" y="210" width="330" height="420" rx="26"/>
+  <text class="label" x="75" y="250">TELEMETRY SOURCES</text>
+  <rect class="box cyan" x="95" y="305" width="240" height="85" rx="21"/>
+  <text class="head" x="215" y="350" text-anchor="middle">Endpoint</text>
+  <text class="body" x="215" y="382" text-anchor="middle">EDR / host logs</text>
+  <rect class="box cyan" x="95" y="415" width="240" height="85" rx="21"/>
+  <text class="head" x="215" y="460" text-anchor="middle">Cloud</text>
+  <text class="body" x="215" y="492" text-anchor="middle">AWS / Azure logs</text>
+  <rect class="box cyan" x="95" y="525" width="240" height="85" rx="21"/>
+  <text class="head" x="215" y="570" text-anchor="middle">Identity</text>
+  <text class="body" x="215" y="602" text-anchor="middle">Auth / IAM events</text>
 
-  <rect class="panel" x="998" y="176" width="554" height="292" rx="22"/>
-  <text class="label" x="1018" y="210">DETECTION + INVESTIGATION</text>
-  <rect class="box green" x="1040" y="244" width="452" height="68" rx="18"/><text class="head" x="1266" y="283" text-anchor="middle">Detection Engine</text><text class="body" x="1266" y="313" text-anchor="middle">Sigma rules + correlation</text>
-  <rect class="box green" x="1040" y="336" width="452" height="68" rx="18"/><text class="head" x="1266" y="375" text-anchor="middle">Investigation Workspace</text><text class="body" x="1266" y="405" text-anchor="middle">Timeline, graph, evidence</text>
-  <rect class="box green" x="1040" y="428" width="452" height="68" rx="18"/><text class="head" x="1266" y="467" text-anchor="middle">AI Triage Assistant</text><text class="body" x="1266" y="497" text-anchor="middle">Summaries + recommendations</text>
+  <rect class="panel" x="430" y="210" width="300" height="420" rx="26"/>
+  <text class="label" x="454" y="250">INGESTION</text>
+  <rect class="box blue" x="470" y="340" width="220" height="85" rx="21"/>
+  <text class="head" x="580" y="385" text-anchor="middle">Collectors</text>
+  <text class="body" x="580" y="417" text-anchor="middle">OTel collectors</text>
+  <rect class="box blue" x="470" y="475" width="220" height="105" rx="21"/>
+  <text class="head" x="580" y="520" text-anchor="middle">Normalize</text>
+  <text class="body" x="580" y="550" text-anchor="middle">
+    <tspan x="580">OCSF mapping</tspan>
+    <tspan x="580" dy="28">Enrichment</tspan>
+  </text>
 
-  <rect class="panel" x="218" y="602" width="1175" height="192" rx="24"/>
-  <text class="label" x="238" y="634">GOVERNED RESPONSE LAYER</text>
-  <rect class="box yellow" x="278" y="674" width="192" height="72" rx="18"/><text class="head" x="374" y="710" text-anchor="middle">Action Proposal</text><text class="body" x="374" y="740" text-anchor="middle">Suggested response</text>
-  <rect class="box yellow" x="522" y="674" width="192" height="72" rx="18"/><text class="head" x="618" y="712" text-anchor="middle">Policy Check</text><text class="body" x="618" y="742" text-anchor="middle">OPA / Rego gates</text>
-  <rect class="box blue" x="764" y="674" width="192" height="72" rx="18"/><text class="head" x="860" y="712" text-anchor="middle">Approval</text><text class="body" x="860" y="742" text-anchor="middle">Human review</text>
-  <rect class="box green" x="1006" y="674" width="192" height="72" rx="18"/><text class="head" x="1102" y="712" text-anchor="middle">SOAR Execute</text><text class="body" x="1102" y="742" text-anchor="middle">Playbook action</text>
-  <rect class="box red" x="1250" y="674" width="106" height="72" rx="18"/><text class="head" x="1303" y="712" text-anchor="middle">Audit</text><text class="body" x="1303" y="742" text-anchor="middle">Receipts</text>
+  <rect class="panel" x="780" y="210" width="360" height="420" rx="26"/>
+  <text class="label" x="804" y="250">DATA PLANE</text>
+  <rect class="box purple" x="825" y="290" width="280" height="85" rx="21"/>
+  <text class="head" x="965" y="335" text-anchor="middle">Event Bus</text>
+  <text class="body" x="965" y="367" text-anchor="middle">Kafka / Redpanda</text>
+  <rect class="box purple" x="825" y="400" width="280" height="105" rx="21"/>
+  <text class="head" x="965" y="444" text-anchor="middle">Hot Analytics</text>
+  <text class="body" x="965" y="474" text-anchor="middle">
+    <tspan x="965">ClickHouse /</tspan>
+    <tspan x="965" dy="28">OpenSearch</tspan>
+  </text>
+  <rect class="box purple" x="825" y="525" width="280" height="105" rx="21"/>
+  <text class="head" x="965" y="569" text-anchor="middle">Knowledge Graph</text>
+  <text class="body" x="965" y="599" text-anchor="middle">
+    <tspan x="965">Assets, users,</tspan>
+    <tspan x="965" dy="28">threats</tspan>
+  </text>
 
-  <path class="arrow" d="M280 289 L395 322"/><path class="arrow" d="M280 381 L395 322"/><path class="arrow" d="M280 473 L395 322"/>
-  <path class="arrow" d="M487 359 V397"/><path class="arrow" d="M579 434 L692 278"/>
-  <path class="arrow" d="M927 278 H1040"/><path class="arrow" d="M927 370 H1040"/><path class="arrow" d="M927 462 H1040"/>
-  <path class="greenarrow" d="M1266 496 L374 674"/>
-  <path class="arrow" d="M470 710 H522"/><path class="arrow" d="M714 710 H764"/><path class="arrow" d="M956 710 H1006"/><path class="arrow" d="M1198 710 H1250"/>
-  <text class="foot" x="1190" y="875">Mini-XDR Showcase • sanitized portfolio architecture</text>
+  <rect class="panel" x="1190" y="210" width="660" height="420" rx="26"/>
+  <text class="label" x="1214" y="250">DETECTION + INVESTIGATION</text>
+  <rect class="box green" x="1245" y="290" width="540" height="85" rx="21"/>
+  <text class="head" x="1515" y="335" text-anchor="middle">Detection Engine</text>
+  <text class="body" x="1515" y="367" text-anchor="middle">Sigma rules + correlation</text>
+  <rect class="box green" x="1245" y="405" width="540" height="85" rx="21"/>
+  <text class="head" x="1515" y="450" text-anchor="middle">Investigation Workspace</text>
+  <text class="body" x="1515" y="482" text-anchor="middle">Timeline, graph, evidence</text>
+  <rect class="box green" x="1245" y="520" width="540" height="85" rx="21"/>
+  <text class="head" x="1515" y="565" text-anchor="middle">AI Triage Assistant</text>
+  <text class="body" x="1515" y="597" text-anchor="middle">Summaries + recommendations</text>
+
+  <rect class="panel" x="260" y="716" width="1400" height="235" rx="28"/>
+  <text class="label" x="284" y="756">GOVERNED RESPONSE LAYER</text>
+  <rect class="box yellow" x="330" y="805" width="230" height="105" rx="22"/>
+  <text class="head" x="445" y="849" text-anchor="middle">Action Proposal</text>
+  <text class="body" x="445" y="879" text-anchor="middle">
+    <tspan x="445">Suggested</tspan>
+    <tspan x="445" dy="28">response</tspan>
+  </text>
+  <rect class="box yellow" x="625" y="805" width="230" height="105" rx="22"/>
+  <text class="head" x="740" y="854" text-anchor="middle">Policy Check</text>
+  <text class="body" x="740" y="887" text-anchor="middle">OPA / Rego gates</text>
+  <rect class="box blue" x="915" y="805" width="230" height="105" rx="22"/>
+  <text class="head" x="1030" y="854" text-anchor="middle">Approval</text>
+  <text class="body" x="1030" y="887" text-anchor="middle">Human review</text>
+  <rect class="box green" x="1205" y="805" width="230" height="105" rx="22"/>
+  <text class="head" x="1320" y="854" text-anchor="middle">SOAR Execute</text>
+  <text class="body" x="1320" y="887" text-anchor="middle">Playbook action</text>
+  <rect class="box red" x="1495" y="805" width="130" height="105" rx="22"/>
+  <text class="head" x="1560" y="854" text-anchor="middle">Audit</text>
+  <text class="body" x="1560" y="887" text-anchor="middle">Receipts</text>
+
+  <path class="arrow" d="M335 348 L470 383"/>
+  <path class="arrow" d="M335 458 L470 383"/>
+  <path class="arrow" d="M335 568 L470 383"/>
+  <path class="arrow" d="M580 425 V475"/>
+  <path class="arrow" d="M690 528 L825 333"/>
+  <path class="arrow" d="M1105 333 H1245"/>
+  <path class="arrow" d="M1105 453 H1245"/>
+  <path class="arrow" d="M1105 578 L1245 563"/>
+  <path class="greenarrow" d="M1515 605 L445 805"/>
+  <path class="arrow" d="M560 858 H625"/>
+  <path class="arrow" d="M855 858 H915"/>
+  <path class="arrow" d="M1145 858 H1205"/>
+  <path class="arrow" d="M1435 858 H1495"/>
+
+  <text class="foot" x="1427" y="1047">Mini-XDR Showcase • sanitized portfolio architecture</text>
 </svg>
