@@ -11,19 +11,16 @@ Captured screenshots:
 | `dashboard-overview.png` | Main SOC dashboard with synthetic metrics | Added |
 | `investigation-workspace.png` | Incident detail workspace with timeline, AI analysis, evidence, and response actions | Added |
 | `action-history.png` | Action history drawer with execution detail and response result | Added |
+| `incident-queue.png` | Incident queue with fake tenant and demo incidents | Added |
 | `workflow-overview.png` | Workflow automation platform overview | Added |
 | `workflow-templates.png` | Playbook template catalog for SOAR response workflows | Added |
 | `ai-workflow-chat.png` | Natural-language workflow creator with incident context | Added |
 | `agent-command-center.png` | AI agent command center with agent status cards | Added |
 | `honeypot-monitoring.png` | T-Pot/Cowrie-style monitoring with sanitized connection data | Added |
 
-## Still Worth Capturing
+## Optional Future Captures
 
-| Filename | Intended View |
-| --- | --- |
-| `incident-queue.png` | Incident queue with fake tenant and demo incidents |
-| `threat-visualization.png` | 3D threat visualization or attack map |
-| `analytics-dashboard.png` | Analytics, ML monitoring, explainability, or response metrics |
+No additional screenshots are required for the current public showcase. If analytics or threat visualization pages are built later, add sanitized captures here and reference them from the main README.
 
 Recommended redactions:
 
