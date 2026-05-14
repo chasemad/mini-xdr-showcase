@@ -88,24 +88,31 @@ For a technical reviewer, start here:
 
 ## Screenshots
 
-Screenshot placeholders are tracked in [assets/screenshots/README.md](assets/screenshots/README.md). The repo is ready for the sanitized screenshots below:
+Screenshot guidance is tracked in [assets/screenshots/README.md](assets/screenshots/README.md). Click any image below to open the full-size version.
+
+| Dashboard Overview | Investigation Workspace |
+| --- | --- |
+| <a href="assets/screenshots/dashboard-overview.png"><img src="assets/screenshots/dashboard-overview.png" alt="Mini-XDR dashboard overview" width="100%"></a> | <a href="assets/screenshots/investigation-workspace.png"><img src="assets/screenshots/investigation-workspace.png" alt="Incident investigation workspace" width="100%"></a> |
+
+| Action History | Workflow Overview |
+| --- | --- |
+| <a href="assets/screenshots/action-history.png"><img src="assets/screenshots/action-history.png" alt="Automated action history and execution detail" width="100%"></a> | <a href="assets/screenshots/workflow-overview.png"><img src="assets/screenshots/workflow-overview.png" alt="Workflow automation platform overview" width="100%"></a> |
+
+| Workflow Templates | AI Workflow Chat |
+| --- | --- |
+| <a href="assets/screenshots/workflow-templates.png"><img src="assets/screenshots/workflow-templates.png" alt="SOAR playbook template catalog" width="100%"></a> | <a href="assets/screenshots/ai-workflow-chat.png"><img src="assets/screenshots/ai-workflow-chat.png" alt="AI-powered natural-language workflow creator" width="100%"></a> |
+
+| Agent Command Center | Honeypot Monitoring |
+| --- | --- |
+| <a href="assets/screenshots/agent-command-center.png"><img src="assets/screenshots/agent-command-center.png" alt="AI agent command center" width="100%"></a> | <a href="assets/screenshots/honeypot-monitoring.png"><img src="assets/screenshots/honeypot-monitoring.png" alt="T-Pot honeypot monitoring dashboard" width="100%"></a> |
+
+Remaining screenshot slots:
 
 | Filename | View |
 | --- | --- |
-| `dashboard-overview.png` | Main SOC dashboard and risk posture overview |
 | `incident-queue.png` | Incident list with severity, risk, confidence, and containment state |
-| `investigation-workspace.png` | Incident detail workspace with AI analysis, event timeline, response actions, and audit context |
-| `action-history.png` | Action history drawer showing automated response evidence and execution details |
-| `workflow-overview.png` | Workflow automation platform overview |
-| `workflow-templates.png` | SOAR/playbook template catalog |
-| `ai-workflow-chat.png` | Natural-language workflow creator with incident context |
-| `agent-command-center.png` | AI agent command center and agent status view |
-| `honeypot-monitoring.png` | T-Pot/Cowrie-style honeypot monitoring view |
-
-Recommended remaining screenshots:
-
-- `threat-visualization.png` from the threat visualization page
-- `analytics-dashboard.png` from analytics or ML monitoring
+| `threat-visualization.png` | Threat visualization or attack map |
+| `analytics-dashboard.png` | Analytics, ML monitoring, explainability, or response metrics |
 
 ## Repository Structure
 
