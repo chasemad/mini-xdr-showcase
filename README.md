@@ -88,7 +88,24 @@ For a technical reviewer, start here:
 
 ## Screenshots
 
-Screenshot placeholders are tracked in [assets/screenshots/README.md](assets/screenshots/README.md). Images will be added after sanitized screenshots are captured from the demo environment.
+Screenshot placeholders are tracked in [assets/screenshots/README.md](assets/screenshots/README.md). The repo is ready for the sanitized screenshots below:
+
+| Filename | View |
+| --- | --- |
+| `dashboard-overview.png` | Main SOC dashboard and risk posture overview |
+| `incident-queue.png` | Incident list with severity, risk, confidence, and containment state |
+| `investigation-workspace.png` | Incident detail workspace with AI analysis, event timeline, response actions, and audit context |
+| `action-history.png` | Action history drawer showing automated response evidence and execution details |
+| `workflow-overview.png` | Workflow automation platform overview |
+| `workflow-templates.png` | SOAR/playbook template catalog |
+| `ai-workflow-chat.png` | Natural-language workflow creator with incident context |
+| `agent-command-center.png` | AI agent command center and agent status view |
+| `honeypot-monitoring.png` | T-Pot/Cowrie-style honeypot monitoring view |
+
+Recommended remaining screenshots:
+
+- `threat-visualization.png` from the threat visualization page
+- `analytics-dashboard.png` from analytics or ML monitoring
 
 ## Repository Structure
 
