@@ -1,0 +1,42 @@
+receivers:
+  filelog/demo_windows_events:
+    include:
+      - /var/log/minixdr-demo/windows-events.jsonl
+    start_at: beginning
+    operators:
+      - type: json_parser
+        timestamp:
+          parse_from: attributes.event_time
+          layout_type: strptime
+          layout: "%Y-%m-%dT%H:%M:%SZ"
+
+processors:
+  attributes/minixdr_context:
+    actions:
+      - key: tenant_id
+        value: tenant-demo
+        action: upsert
+      - key: source_type
+        value: endpoint
+        action: upsert
+
+  batch:
+    timeout: 5s
+    send_batch_size: 512
+
+exporters:
+  otlphttp/minixdr_ingest:
+    endpoint: https://collector.example.invalid/v1/logs
+    headers:
+      x-demo-source: mini-xdr-showcase
+
+service:
+  pipelines:
+    logs:
+      receivers:
+        - filelog/demo_windows_events
+      processors:
+        - attributes/minixdr_context
+        - batch
+      exporters:
+        - otlphttp/minixdr_ingest

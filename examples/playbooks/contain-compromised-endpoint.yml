@@ -1,0 +1,82 @@
+id: contain-compromised-endpoint
+name: Contain Compromised Endpoint
+version: 1.0.0
+description: Sanitized SOAR-style workflow for containing a compromised endpoint after analyst approval.
+scope: documentation-example
+tenant_id: tenant-demo
+
+triggers:
+  - type: finding
+    conditions:
+      severity:
+        minimum: high
+      confidence:
+        minimum: medium
+      asset_criticality:
+        minimum: medium
+
+governance:
+  approval_required: true
+  approver_role: security_analyst
+  kill_switch_respected: true
+  rollback_required: true
+  audit_events:
+    - proposal_created
+    - policy_evaluated
+    - approval_recorded
+    - action_executed
+    - verification_completed
+
+steps:
+  - id: collect-evidence
+    name: Collect recent endpoint evidence
+    action: collect_recent_logs
+    inputs:
+      lookback_minutes: 30
+      include:
+        - process_tree
+        - network_connections
+        - authentication_events
+
+  - id: enrich-context
+    name: Enrich asset and identity context
+    action: enrich_entities
+    inputs:
+      include_asset_owner: true
+      include_recent_user_activity: true
+      include_threat_intel: true
+
+  - id: request-approval
+    name: Request analyst approval
+    action: request_approval
+    inputs:
+      reason: High-risk containment requires human approval.
+      expected_impact: Endpoint network access may be restricted until verification completes.
+
+  - id: isolate-endpoint
+    name: Isolate endpoint
+    action: isolate_endpoint
+    depends_on:
+      - request-approval
+    inputs:
+      isolation_level: network_containment
+      preserve_management_channel: true
+
+  - id: verify-containment
+    name: Verify containment
+    action: verify_endpoint_isolation
+    depends_on:
+      - isolate-endpoint
+    inputs:
+      timeout_seconds: 120
+      required_signals:
+        - endpoint_reachable_by_management
+        - suspicious_egress_stopped
+
+rollback:
+  supported: true
+  action: release_endpoint_isolation
+  conditions:
+    - analyst_approved_rollback
+    - business_owner_validated
+  notes: Restore normal network access after owner validation or false-positive determination.

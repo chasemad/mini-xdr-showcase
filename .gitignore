@@ -1,0 +1,35 @@
+.DS_Store
+
+# Secrets and local configuration
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# Logs and local output
+*.log
+logs/
+tmp/
+temp/
+
+# Dependencies and build artifacts
+node_modules/
+.next/
+dist/
+build/
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Large/private artifacts that do not belong in this showcase
+models/
+datasets/
+*.tar.gz
+*.zip
+*.sqlite
+*.db

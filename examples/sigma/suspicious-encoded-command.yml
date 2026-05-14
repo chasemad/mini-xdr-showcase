@@ -1,0 +1,41 @@
+title: Suspicious Encoded PowerShell Command
+id: 7d6b3ac4-5f6a-4b0c-9f1c-demo0000001
+status: experimental
+description: Detects PowerShell execution with encoded command indicators in a synthetic endpoint event stream.
+author: Mini-XDR Showcase
+date: 2026/05/14
+references:
+  - https://attack.mitre.org/techniques/T1059/001/
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection_process:
+    Image|endswith:
+      - '\powershell.exe'
+      - '\pwsh.exe'
+  selection_encoded:
+    CommandLine|contains:
+      - ' -enc '
+      - ' -encodedcommand '
+      - ' FromBase64String'
+  condition: selection_process and selection_encoded
+fields:
+  - UtcTime
+  - Computer
+  - User
+  - Image
+  - CommandLine
+  - ParentImage
+falsepositives:
+  - Administrative scripts that legitimately encode short commands.
+  - Endpoint management tooling during approved maintenance windows.
+level: high
+tags:
+  - attack.execution
+  - attack.t1059.001
+mini_xdr:
+  tenant_id: tenant-demo
+  normalized_category: process_activity
+  response_hint: collect_process_tree
+  approval_required: false

@@ -1,0 +1,69 @@
+{
+  "activity_name": "Finding Created",
+  "activity_id": 1,
+  "category_name": "Findings",
+  "category_uid": 2,
+  "class_name": "Detection Finding",
+  "class_uid": 2004,
+  "severity": "High",
+  "severity_id": 4,
+  "status": "New",
+  "status_id": 1,
+  "time": 1778784161000,
+  "metadata": {
+    "product": {
+      "name": "Mini-XDR Showcase",
+      "vendor_name": "Portfolio Demo"
+    },
+    "version": "showcase"
+  },
+  "cloud": {
+    "provider": "demo-cloud",
+    "account_uid": "account-demo-001"
+  },
+  "actor": {
+    "user": {
+      "name": "svc-backup-demo",
+      "uid": "user-demo-014"
+    }
+  },
+  "src_endpoint": {
+    "ip": "198.51.100.24",
+    "name": "demo-endpoint-07"
+  },
+  "resources": [
+    {
+      "name": "demo-endpoint-07",
+      "type": "endpoint",
+      "criticality": "high"
+    }
+  ],
+  "finding": {
+    "uid": "finding-demo-0001",
+    "title": "Suspicious Encoded PowerShell Command",
+    "desc": "Synthetic process activity matched a Sigma-style encoded command rule.",
+    "types": [
+      "process_activity",
+      "execution"
+    ]
+  },
+  "attacks": [
+    {
+      "tactic": {
+        "name": "Execution"
+      },
+      "technique": {
+        "name": "PowerShell",
+        "uid": "T1059.001"
+      }
+    }
+  ],
+  "unmapped": {
+    "tenant_id": "tenant-demo",
+    "risk_score": 0.82,
+    "evidence_refs": [
+      "evidence://tenant-demo/finding-demo-0001/process-event"
+    ],
+    "approval_required_for_response": true
+  }
+}
