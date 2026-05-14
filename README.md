@@ -90,25 +90,25 @@ For a technical reviewer, start here:
 
 Screenshot guidance is tracked in [assets/screenshots/README.md](assets/screenshots/README.md). Click any image below to open the full-size version.
 
+### Featured Investigation Workspace
+
+<a href="assets/screenshots/investigation-workspace.png"><img src="assets/screenshots/investigation-workspace.png" alt="Incident investigation workspace with threat score, AI analysis, event timeline, and response automation" width="100%"></a>
+
 | Dashboard Overview | Incident Queue |
 | --- | --- |
 | <a href="assets/screenshots/dashboard-overview.png"><img src="assets/screenshots/dashboard-overview.png" alt="Mini-XDR dashboard overview" width="100%"></a> | <a href="assets/screenshots/incident-queue.png"><img src="assets/screenshots/incident-queue.png" alt="Incident queue with severity, risk, confidence, and containment state" width="100%"></a> |
 
-| Investigation Workspace | Action History |
+| Action History | Workflow Overview |
 | --- | --- |
-| <a href="assets/screenshots/investigation-workspace.png"><img src="assets/screenshots/investigation-workspace.png" alt="Incident investigation workspace" width="100%"></a> | <a href="assets/screenshots/action-history.png"><img src="assets/screenshots/action-history.png" alt="Automated action history and execution detail" width="100%"></a> |
+| <a href="assets/screenshots/action-history.png"><img src="assets/screenshots/action-history.png" alt="Automated action history and execution detail" width="100%"></a> | <a href="assets/screenshots/workflow-overview.png"><img src="assets/screenshots/workflow-overview.png" alt="Workflow automation platform overview" width="100%"></a> |
 
-| Workflow Overview | Workflow Templates |
+| Workflow Templates | AI Workflow Chat |
 | --- | --- |
-| <a href="assets/screenshots/workflow-overview.png"><img src="assets/screenshots/workflow-overview.png" alt="Workflow automation platform overview" width="100%"></a> | <a href="assets/screenshots/workflow-templates.png"><img src="assets/screenshots/workflow-templates.png" alt="SOAR playbook template catalog" width="100%"></a> |
+| <a href="assets/screenshots/workflow-templates.png"><img src="assets/screenshots/workflow-templates.png" alt="SOAR playbook template catalog" width="100%"></a> | <a href="assets/screenshots/ai-workflow-chat.png"><img src="assets/screenshots/ai-workflow-chat.png" alt="AI-powered natural-language workflow creator" width="100%"></a> |
 
-| AI Workflow Chat | Agent Command Center |
+| Agent Command Center | Honeypot Monitoring |
 | --- | --- |
-| <a href="assets/screenshots/ai-workflow-chat.png"><img src="assets/screenshots/ai-workflow-chat.png" alt="AI-powered natural-language workflow creator" width="100%"></a> | <a href="assets/screenshots/agent-command-center.png"><img src="assets/screenshots/agent-command-center.png" alt="AI agent command center" width="100%"></a> |
-
-| Honeypot Monitoring |
-| --- | --- |
-| <a href="assets/screenshots/honeypot-monitoring.png"><img src="assets/screenshots/honeypot-monitoring.png" alt="T-Pot honeypot monitoring dashboard" width="100%"></a> |
+| <a href="assets/screenshots/agent-command-center.png"><img src="assets/screenshots/agent-command-center.png" alt="AI agent command center" width="100%"></a> | <a href="assets/screenshots/honeypot-monitoring.png"><img src="assets/screenshots/honeypot-monitoring.png" alt="T-Pot honeypot monitoring dashboard" width="100%"></a> |
 
 ## Repository Structure
 
