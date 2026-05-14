@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">AWS-Style Reference Architecture</title>
+  <desc id="desc">Cloud-native security monitoring pattern for the Mini-XDR showcase.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0 0 L12 6 L0 12 Z" fill="#94a3b8"/>
+    </marker>
+    <style>
+      .bg{fill:#070d1a}.title{font:700 46px Inter,Arial,sans-serif;fill:#f3f7ff}.sub{font:24px Inter,Arial,sans-serif;fill:#b9c4d6}
+      .panel{fill:#101827;stroke:#49617f;stroke-width:1.2}.box{fill:#101827;stroke-width:3}.cyan{stroke:#18d7e6}.blue{stroke:#28aef7}.purple{stroke:#a65cf4}.green{stroke:#34df8e}.yellow{stroke:#ffc21a}.red{stroke:#ff5570}
+      .label{font:700 20px Inter,Arial,sans-serif;fill:#b9c4d6;letter-spacing:1px}.head{font:700 24px Inter,Arial,sans-serif;fill:#f3f7ff}.body{font:20px Inter,Arial,sans-serif;fill:#bdc8da}
+      .arrow{stroke:#94a3b8;stroke-width:4;fill:none;marker-end:url(#arrow)}.foot{font:16px Inter,Arial,sans-serif;fill:#aab6c8}
+    </style>
+  </defs>
+  <rect class="bg" width="1600" height="900"/>
+  <text class="title" x="60" y="86">AWS-Style Reference Architecture</text>
+  <text class="sub" x="60" y="120">Cloud-native security monitoring pattern for the Mini-XDR showcase</text>
+
+  <rect class="panel" x="60" y="193" width="302" height="324" rx="22"/>
+  <text class="label" x="80" y="227">AWS ACCOUNTS</text>
+  <rect class="box cyan" x="110" y="270" width="200" height="68" rx="18"/><text class="head" x="210" y="307" text-anchor="middle">CloudTrail</text><text class="body" x="210" y="333" text-anchor="middle">Mgmt + data events</text>
+  <rect class="box cyan" x="110" y="362" width="200" height="68" rx="18"/><text class="head" x="210" y="399" text-anchor="middle">CloudWatch</text><text class="body" x="210" y="425" text-anchor="middle">Logs + metrics</text>
+  <rect class="box cyan" x="110" y="454" width="200" height="68" rx="18"/><text class="head" x="210" y="491" text-anchor="middle">GuardDuty</text><text class="body" x="210" y="517" text-anchor="middle">Findings concept</text>
+
+  <rect class="panel" x="436" y="193" width="302" height="324" rx="22"/>
+  <text class="label" x="456" y="227">COLLECTION</text>
+  <rect class="box blue" x="486" y="270" width="200" height="68" rx="18"/><text class="head" x="586" y="309" text-anchor="middle">EventBridge</text><text class="body" x="586" y="339" text-anchor="middle">Event routing</text>
+  <rect class="box blue" x="486" y="362" width="200" height="68" rx="18"/><text class="head" x="586" y="401" text-anchor="middle">Firehose</text><text class="body" x="586" y="431" text-anchor="middle">Stream delivery</text>
+  <rect class="box blue" x="486" y="454" width="200" height="68" rx="18"/><text class="head" x="586" y="493" text-anchor="middle">OTel Collector</text><text class="body" x="586" y="523" text-anchor="middle">Normalization edge</text>
+
+  <rect class="panel" x="814" y="193" width="654" height="324" rx="22"/>
+  <text class="label" x="834" y="227">SECURITY ANALYTICS</text>
+  <rect class="box purple" x="864" y="270" width="224" height="68" rx="18"/><text class="head" x="976" y="307" text-anchor="middle">S3 Evidence</text><text class="body" x="976" y="333" text-anchor="middle">Raw + parsed archive</text>
+  <rect class="box purple" x="1175" y="270" width="224" height="68" rx="18"/><text class="head" x="1287" y="307" text-anchor="middle">OpenSearch</text><text class="body" x="1287" y="333" text-anchor="middle">Search + dashboards</text>
+  <rect class="box purple" x="864" y="390" width="224" height="68" rx="18"/><text class="head" x="976" y="427" text-anchor="middle">PostgreSQL</text><text class="body" x="976" y="453" text-anchor="middle">Control metadata</text>
+  <rect class="box purple" x="1175" y="390" width="224" height="68" rx="18"/><text class="head" x="1287" y="427" text-anchor="middle">Graph Store</text><text class="body" x="1287" y="453" text-anchor="middle">Asset + identity links</text>
+
+  <rect class="box yellow" x="420" y="635" width="235" height="74" rx="18"/><text class="head" x="538" y="675" text-anchor="middle">Policy Engine</text><text class="body" x="538" y="705" text-anchor="middle">Approval gates</text>
+  <rect class="box green" x="700" y="635" width="235" height="74" rx="18"/><text class="head" x="818" y="675" text-anchor="middle">Detection Service</text><text class="body" x="818" y="705" text-anchor="middle">Rules + correlation</text>
+  <rect class="box green" x="982" y="635" width="235" height="74" rx="18"/><text class="head" x="1100" y="675" text-anchor="middle">Triage UI</text><text class="body" x="1100" y="705" text-anchor="middle">Analyst workspace</text>
+  <rect class="box red" x="700" y="778" width="235" height="74" rx="18"/><text class="head" x="818" y="818" text-anchor="middle">Audit Trail</text><text class="body" x="818" y="848" text-anchor="middle">Decision receipts</text>
+
+  <path class="arrow" d="M310 304 H486"/><path class="arrow" d="M310 396 H486"/><path class="arrow" d="M310 488 H486"/>
+  <path class="arrow" d="M686 304 H864"/><path class="arrow" d="M686 396 L1175 304"/><path class="arrow" d="M686 488 L864 424"/><path class="arrow" d="M686 488 L1175 424"/>
+  <path class="arrow" d="M1088 304 H1175"/><path class="arrow" d="M1088 424 H1175"/>
+  <path class="arrow" d="M976 458 L818 635"/><path class="arrow" d="M1287 458 L818 635"/>
+  <path class="arrow" d="M818 635 L655 672"/><path class="arrow" d="M935 672 H982"/>
+  <path class="arrow" d="M538 709 L760 778"/><path class="arrow" d="M1100 709 L880 778"/>
+  <text class="foot" x="1190" y="875">Mini-XDR Showcase • sanitized portfolio architecture</text>
+</svg>

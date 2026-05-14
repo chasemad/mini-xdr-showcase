@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Telemetry Flow</title>
+  <desc id="desc">From raw source events to normalized, enriched, and routed security telemetry.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0 0 L12 6 L0 12 Z" fill="#94a3b8"/>
+    </marker>
+    <style>
+      .bg{fill:#070d1a}.title{font:700 46px Inter,Arial,sans-serif;fill:#f3f7ff}.sub{font:24px Inter,Arial,sans-serif;fill:#b9c4d6}
+      .box{fill:#101827;stroke-width:3}.cyan{stroke:#18d7e6}.blue{stroke:#28aef7}.purple{stroke:#a65cf4}.green{stroke:#34df8e}.yellow{stroke:#ffc21a}
+      .head{font:700 24px Inter,Arial,sans-serif;fill:#f3f7ff}.body{font:18px Inter,Arial,sans-serif;fill:#bdc8da}.foot{font:16px Inter,Arial,sans-serif;fill:#aab6c8}
+      .arrow{stroke:#94a3b8;stroke-width:4;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="1600" height="900"/>
+  <text class="title" x="60" y="86">Telemetry Flow</text>
+  <text class="sub" x="60" y="120">From raw source events to normalized, enriched, and routed security telemetry</text>
+
+  <g transform="translate(70 255)">
+    <rect class="box cyan" width="220" height="150" rx="20"/>
+    <text class="head" x="110" y="38" text-anchor="middle">Raw Sources</text>
+    <text class="body" x="110" y="70" text-anchor="middle">
+      <tspan x="110" dy="0">Endpoint</tspan><tspan x="110" dy="22">Cloud</tspan><tspan x="110" dy="22">Identity</tspan><tspan x="110" dy="22">Network</tspan>
+    </text>
+  </g>
+  <g transform="translate(350 255)">
+    <rect class="box blue" width="220" height="150" rx="20"/>
+    <text class="head" x="110" y="38" text-anchor="middle">Collectors</text>
+    <text class="body" x="110" y="74" text-anchor="middle"><tspan x="110">OTel agents</tspan><tspan x="110" dy="24">Forwarders</tspan></text>
+  </g>
+  <g transform="translate(635 255)">
+    <rect class="box purple" width="220" height="150" rx="20"/>
+    <text class="head" x="110" y="38" text-anchor="middle">Normalize</text>
+    <text class="body" x="110" y="74" text-anchor="middle"><tspan x="110">OCSF-style</tspan><tspan x="110" dy="24">schema mapping</tspan></text>
+  </g>
+  <g transform="translate(920 255)">
+    <rect class="box purple" width="220" height="150" rx="20"/>
+    <text class="head" x="110" y="38" text-anchor="middle">Enrich</text>
+    <text class="body" x="110" y="74" text-anchor="middle"><tspan x="110">Asset + user</tspan><tspan x="110" dy="24">Threat context</tspan></text>
+  </g>
+  <g transform="translate(1205 255)">
+    <rect class="box green" width="220" height="150" rx="20"/>
+    <text class="head" x="110" y="38" text-anchor="middle">Route</text>
+    <text class="body" x="110" y="70" text-anchor="middle">
+      <tspan x="110">Analytics</tspan><tspan x="110" dy="22">Graph</tspan><tspan x="110" dy="22">Archive</tspan>
+    </text>
+  </g>
+
+  <path class="arrow" d="M290 321 H350"/>
+  <path class="arrow" d="M570 321 H635"/>
+  <path class="arrow" d="M855 321 H920"/>
+  <path class="arrow" d="M1140 321 H1205"/>
+
+  <g transform="translate(435 545)">
+    <rect class="box yellow" width="280" height="132" rx="20"/>
+    <text class="head" x="140" y="36" text-anchor="middle">Quality Gates</text>
+    <text class="body" x="140" y="68" text-anchor="middle"><tspan x="140">Schema validation</tspan><tspan x="140" dy="22">Tenant tagging</tspan><tspan x="140" dy="22">Deduplication</tspan></text>
+  </g>
+  <g transform="translate(845 545)">
+    <rect class="box yellow" width="280" height="132" rx="20"/>
+    <text class="head" x="140" y="36" text-anchor="middle">Privacy Boundary</text>
+    <text class="body" x="140" y="68" text-anchor="middle"><tspan x="140">Synthetic examples</tspan><tspan x="140" dy="22">Sanitized fields</tspan><tspan x="140" dy="22">PII protection</tspan></text>
+  </g>
+  <g transform="translate(1215 545)">
+    <rect class="box yellow" width="280" height="132" rx="20"/>
+    <text class="head" x="140" y="36" text-anchor="middle">Evidence Archive</text>
+    <text class="body" x="140" y="68" text-anchor="middle"><tspan x="140">Raw + parsed evidence</tspan><tspan x="140" dy="24">for replay</tspan></text>
+  </g>
+
+  <path class="arrow" d="M745 387 L575 545"/>
+  <path class="arrow" d="M1030 387 L985 545"/>
+  <path class="arrow" d="M1315 387 L1355 545"/>
+  <text class="foot" x="1190" y="875">Mini-XDR Showcase • sanitized portfolio architecture</text>
+</svg>

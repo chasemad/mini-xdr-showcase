@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">SIEM Ingestion Pipeline</title>
+  <desc id="desc">Ingest, analyze, operationalize, and tune detections.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0 0 L12 6 L0 12 Z" fill="#94a3b8"/>
+    </marker>
+    <style>
+      .bg{fill:#070d1a}.title{font:700 46px Inter,Arial,sans-serif;fill:#f3f7ff}.sub{font:24px Inter,Arial,sans-serif;fill:#b9c4d6}
+      .panel{fill:#101827;stroke:#49617f;stroke-width:1.2}.box{fill:#101827;stroke-width:3}.cyan{stroke:#18d7e6}.green{stroke:#34df8e}.yellow{stroke:#ffc21a}.purple{stroke:#a65cf4}
+      .label{font:700 22px Inter,Arial,sans-serif;fill:#b9c4d6;letter-spacing:1px}.head{font:700 24px Inter,Arial,sans-serif;fill:#f3f7ff}.body{font:20px Inter,Arial,sans-serif;fill:#bdc8da}.arrow{stroke:#94a3b8;stroke-width:4;fill:none;marker-end:url(#arrow)}.foot{font:16px Inter,Arial,sans-serif;fill:#aab6c8}
+    </style>
+  </defs>
+  <rect class="bg" width="1600" height="900"/>
+  <text class="title" x="60" y="86">SIEM Ingestion Pipeline</text>
+  <text class="sub" x="60" y="120">Ingest, analyze, operationalize, and tune detections</text>
+
+  <g transform="translate(60 193)">
+    <rect class="panel" width="360" height="350" rx="22"/>
+    <text class="label" x="20" y="34">INGEST</text>
+    <rect class="box cyan" x="64" y="92" width="235" height="110" rx="18"/>
+    <text class="head" x="181" y="130" text-anchor="middle">Normalized Events</text>
+    <text class="body" x="181" y="158" text-anchor="middle"><tspan x="181">Tenant-scoped</tspan><tspan x="181" dy="24">OCSF-style records</tspan></text>
+    <rect class="box cyan" x="64" y="232" width="235" height="110" rx="18"/>
+    <text class="head" x="181" y="270" text-anchor="middle">Hot Store</text>
+    <text class="body" x="181" y="304" text-anchor="middle"><tspan x="181">Fast query</tspan><tspan x="181" dy="24">Alert windows</tspan></text>
+  </g>
+
+  <g transform="translate(625 193)">
+    <rect class="panel" width="360" height="350" rx="22"/>
+    <text class="label" x="20" y="34">ANALYZE</text>
+    <rect class="box green" x="64" y="92" width="235" height="110" rx="18"/>
+    <text class="head" x="181" y="130" text-anchor="middle">Sigma Rules</text>
+    <text class="body" x="181" y="158" text-anchor="middle"><tspan x="181">Rule metadata</tspan><tspan x="181" dy="24">ATT&amp;CK mapping</tspan></text>
+    <rect class="box green" x="64" y="232" width="235" height="110" rx="18"/>
+    <text class="head" x="181" y="270" text-anchor="middle">Correlation</text>
+    <text class="body" x="181" y="304" text-anchor="middle"><tspan x="181">Multi-event logic</tspan><tspan x="181" dy="24">Suppression</tspan></text>
+  </g>
+
+  <g transform="translate(1190 193)">
+    <rect class="panel" width="360" height="350" rx="22"/>
+    <text class="label" x="20" y="34">OPERATIONALIZE</text>
+    <rect class="box yellow" x="64" y="92" width="235" height="110" rx="18"/>
+    <text class="head" x="181" y="130" text-anchor="middle">Alert Queue</text>
+    <text class="body" x="181" y="152" text-anchor="middle"><tspan x="181">Severity</tspan><tspan x="181" dy="24">Confidence</tspan><tspan x="181" dy="24">Context</tspan></text>
+    <rect class="box yellow" x="64" y="232" width="235" height="110" rx="18"/>
+    <text class="head" x="181" y="270" text-anchor="middle">Incident</text>
+    <text class="body" x="181" y="304" text-anchor="middle"><tspan x="181">Evidence package</tspan><tspan x="181" dy="24">for review</tspan></text>
+  </g>
+
+  <g transform="translate(435 650)">
+    <rect class="box purple" width="270" height="128" rx="18"/>
+    <text class="head" x="135" y="38" text-anchor="middle">Tuning Notes</text>
+    <text class="body" x="135" y="72" text-anchor="middle"><tspan x="135">False positives</tspan><tspan x="135" dy="24">Causes</tspan><tspan x="135" dy="24">Exclusions</tspan></text>
+  </g>
+  <g transform="translate(900 650)">
+    <rect class="box purple" width="270" height="128" rx="18"/>
+    <text class="head" x="135" y="38" text-anchor="middle">Detection Coverage</text>
+    <text class="body" x="135" y="72" text-anchor="middle"><tspan x="135">MITRE view</tspan><tspan x="135" dy="24">Gap tracking</tspan></text>
+  </g>
+
+  <path class="arrow" d="M241 395 V425"/>
+  <path class="arrow" d="M356 465 L689 328"/>
+  <path class="arrow" d="M806 395 V425"/>
+  <path class="arrow" d="M924 465 L1254 328"/>
+  <path class="arrow" d="M1372 395 V425"/>
+  <path class="arrow" d="M806 512 L565 650"/>
+  <path class="arrow" d="M806 512 L1035 650"/>
+  <text class="foot" x="1190" y="875">Mini-XDR Showcase • sanitized portfolio architecture</text>
+</svg>

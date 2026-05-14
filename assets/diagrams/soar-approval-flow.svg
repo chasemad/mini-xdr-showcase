@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">SOAR Approval and Response Flow</title>
+  <desc id="desc">Policy-governed response workflow with human approval, verification, rollback, and auditability.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0 0 L12 6 L0 12 Z" fill="#94a3b8"/>
+    </marker>
+    <style>
+      .bg{fill:#070d1a}.title{font:700 46px Inter,Arial,sans-serif;fill:#f3f7ff}.sub{font:24px Inter,Arial,sans-serif;fill:#b9c4d6}
+      .box{fill:#101827;stroke-width:3}.cyan{stroke:#18d7e6}.blue{stroke:#28aef7}.purple{stroke:#a65cf4}.green{stroke:#34df8e}.yellow{stroke:#ffc21a}.red{stroke:#ff5570}
+      .head{font:700 24px Inter,Arial,sans-serif;fill:#f3f7ff}.body{font:20px Inter,Arial,sans-serif;fill:#f3f7ff}.muted{fill:#bdc8da}.accent-yellow{fill:#ffc21a}.accent-purple{fill:#a65cf4}.accent-blue{fill:#28aef7}.accent-green{fill:#34df8e}.accent-cyan{fill:#18d7e6}.accent-red{fill:#ff5570}
+      .arrow{stroke:#94a3b8;stroke-width:4;fill:none;marker-end:url(#arrow)}.foot{font:16px Inter,Arial,sans-serif;fill:#aab6c8}
+    </style>
+  </defs>
+  <rect class="bg" width="1600" height="900"/>
+  <text class="title" x="60" y="86">SOAR Approval &amp; Response Flow</text>
+  <text class="sub" x="60" y="120">Policy-governed response workflow with human approval, verification, rollback, and auditability</text>
+
+  <g transform="translate(60 170)">
+    <rect class="box yellow" width="280" height="195" rx="20"/>
+    <text class="head accent-yellow" x="24" y="40">1. Proposed Action</text>
+    <text class="body" x="30" y="76"><tspan x="30">Isolate endpoint</tspan><tspan x="30" dy="26">Revoke session</tspan><tspan x="30" dy="26">Disable account</tspan><tspan x="30" dy="26">Block IP / domain</tspan></text>
+  </g>
+  <g transform="translate(420 170)">
+    <rect class="box purple" width="280" height="195" rx="20"/>
+    <text class="head accent-purple" x="24" y="40">2. Policy Check</text>
+    <text class="body" x="30" y="76"><tspan x="30">OPA/Rego policy</tspan><tspan x="30" dy="26">Tenant context</tspan><tspan x="30" dy="26">Risk threshold</tspan><tspan x="30" dy="26">Safety gates</tspan></text>
+  </g>
+  <g transform="translate(780 170)">
+    <rect class="box blue" width="280" height="195" rx="20"/>
+    <text class="head accent-blue" x="24" y="40">3. Approval Route</text>
+    <text class="body" x="30" y="76"><tspan x="30">Auto-approve</tspan><tspan x="30" dy="26">Manual review</tspan><tspan x="30" dy="26">Deny / block</tspan></text>
+  </g>
+  <g transform="translate(1140 170)">
+    <rect class="box green" width="280" height="195" rx="20"/>
+    <text class="head accent-green" x="24" y="40">4. Execute</text>
+    <text class="body" x="30" y="76"><tspan x="30">Run SOAR playbook</tspan><tspan x="30" dy="26">Apply approved action</tspan><tspan x="30" dy="26">Record outcome</tspan></text>
+  </g>
+
+  <path class="arrow" d="M340 267 H420"/>
+  <path class="arrow" d="M700 267 H780"/>
+  <path class="arrow" d="M1060 267 H1140"/>
+
+  <g transform="translate(235 468)">
+    <rect class="box cyan" width="285" height="156" rx="18"/>
+    <text class="head accent-cyan" x="24" y="40">Simulation</text>
+    <text class="body" x="30" y="78"><tspan x="30">Expected impact</tspan><tspan x="30" dy="26">Affected assets</tspan><tspan x="30" dy="26">Blast radius</tspan><tspan x="30" dy="26">Risk delta</tspan></text>
+  </g>
+  <g transform="translate(665 468)">
+    <rect class="box cyan" width="285" height="156" rx="18"/>
+    <text class="head accent-cyan" x="24" y="40">Rollback Plan</text>
+    <text class="body" x="30" y="78"><tspan x="30">Restore access</tspan><tspan x="30" dy="26">Undo isolation</tspan><tspan x="30" dy="26">Revert changes</tspan></text>
+  </g>
+  <g transform="translate(1090 468)">
+    <rect class="box cyan" width="285" height="156" rx="18"/>
+    <text class="head accent-cyan" x="24" y="40">Verification</text>
+    <text class="body" x="30" y="78"><tspan x="30">Confirm state</tspan><tspan x="30" dy="26">Collect evidence</tspan><tspan x="30" dy="26">Validate results</tspan></text>
+  </g>
+  <g transform="translate(615 700)">
+    <rect class="box red" width="375" height="166" rx="18"/>
+    <text class="head accent-red" x="24" y="40">Audit Receipt</text>
+    <text class="body" x="30" y="78"><tspan x="30">Who, what, when, why</tspan><tspan x="30" dy="26">Evidence collected</tspan><tspan x="30" dy="26">Policy result</tspan><tspan x="30" dy="26">Action outcome</tspan></text>
+  </g>
+
+  <path class="arrow" d="M195 365 L335 468"/>
+  <path class="arrow" d="M560 365 L380 468"/>
+  <path class="arrow" d="M920 365 L807 468"/>
+  <path class="arrow" d="M1275 365 L1235 468"/>
+  <path class="arrow" d="M377 624 L615 765"/>
+  <path class="arrow" d="M807 624 V700"/>
+  <path class="arrow" d="M1230 624 L990 765"/>
+  <text class="foot" x="1190" y="875">Mini-XDR Showcase • sanitized portfolio architecture</text>
+</svg>

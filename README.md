@@ -25,80 +25,7 @@ All examples use sanitized demo data, fake tenants, fake assets, and documentati
 
 ## Architecture Overview
 
-```mermaid
-flowchart LR
-    subgraph Sources["Telemetry Sources"]
-        Endpoint["Endpoint Logs"]
-        Cloud["Cloud Logs"]
-        Identity["Identity Events"]
-        Network["Network Telemetry"]
-    end
-
-    subgraph Ingest["Collection & Normalization"]
-        Collector["OpenTelemetry Collectors"]
-        Normalize["OCSF-Style Normalization"]
-        Enrich["Enrichment<br/>Asset, User, Tenant, Geo, Threat Intel"]
-    end
-
-    subgraph Data["Data & Analytics Layer"]
-        Bus["Kafka / Redpanda Event Bus"]
-        Hot["Hot Analytics Store<br/>ClickHouse / OpenSearch Concept"]
-        Control["Control Plane<br/>PostgreSQL"]
-        Graph["Knowledge Graph<br/>Assets, Identities, Threats"]
-        Archive["Object Storage<br/>Raw + Parsed Evidence"]
-    end
-
-    subgraph Detection["Detection & Correlation"]
-        Sigma["Sigma-Style Detection Rules"]
-        Correlation["Event Correlation"]
-        Risk["Risk + Blast Radius Scoring"]
-    end
-
-    subgraph Investigation["Investigation Workspace"]
-        Queue["Incident Queue"]
-        Timeline["Event Timeline"]
-        EntityGraph["Entity Graph"]
-        Evidence["Evidence Drawer"]
-    end
-
-    subgraph AI["AI-Assisted Triage"]
-        Assistant["AI Triage Assistant"]
-        Summary["Findings + Evidence Summary"]
-        Proposal["Recommended Response Action"]
-    end
-
-    subgraph Governance["Policy-Governed Response"]
-        Policy["OPA / Rego Policy Check"]
-        Approval["Human Approval Gate"]
-        SOAR["SOAR / Playbook Execution"]
-        Verify["Verify + Rollback Plan"]
-        Audit["Immutable Audit Trail"]
-    end
-
-    Sources --> Collector --> Normalize --> Enrich --> Bus
-    Bus --> Hot
-    Bus --> Control
-    Bus --> Graph
-    Bus --> Archive
-
-    Hot --> Sigma --> Correlation --> Risk
-    Graph --> Risk
-
-    Risk --> Queue
-    Queue --> Timeline
-    Queue --> EntityGraph
-    Queue --> Evidence
-
-    Timeline --> Assistant
-    EntityGraph --> Assistant
-    Evidence --> Assistant
-
-    Assistant --> Summary --> Proposal
-    Proposal --> Policy
-    Policy --> Approval
-    Approval --> SOAR --> Verify --> Audit
-    Policy --> Audit
-```
+![Mini-XDR reference architecture](assets/diagrams/reference-architecture.svg)
 
 ## Recommended Reading Path
 
@@ -135,12 +62,29 @@ For a technical reviewer, start here:
 
 ## Diagrams
 
-- [Reference architecture](diagrams/reference-architecture.md)
-- [Telemetry flow](diagrams/telemetry-flow.md)
-- [SIEM ingestion flow](diagrams/siem-ingestion.md)
-- [AI triage workflow](diagrams/ai-triage-workflow.md)
-- [SOAR approval flow](diagrams/soar-approval-flow.md)
-- [Conceptual AWS reference architecture](diagrams/aws-reference-architecture.md)
+### Reference Architecture
+
+<a href="diagrams/reference-architecture.md"><img src="assets/diagrams/reference-architecture.svg" alt="Mini-XDR reference architecture" width="100%"></a>
+
+### Telemetry Flow
+
+<a href="diagrams/telemetry-flow.md"><img src="assets/diagrams/telemetry-flow.svg" alt="Telemetry flow" width="100%"></a>
+
+### SIEM Ingestion Pipeline
+
+<a href="diagrams/siem-ingestion.md"><img src="assets/diagrams/siem-ingestion-pipeline.svg" alt="SIEM ingestion pipeline" width="100%"></a>
+
+### AI Triage Workflow
+
+<a href="diagrams/ai-triage-workflow.md"><img src="assets/diagrams/ai-triage-workflow.svg" alt="AI triage workflow" width="100%"></a>
+
+### SOAR Approval Flow
+
+<a href="diagrams/soar-approval-flow.md"><img src="assets/diagrams/soar-approval-flow.svg" alt="SOAR approval and response flow" width="100%"></a>
+
+### AWS-Style Reference Architecture
+
+<a href="diagrams/aws-reference-architecture.md"><img src="assets/diagrams/aws-style-reference-architecture.svg" alt="AWS-style reference architecture" width="100%"></a>
 
 ## Screenshots
 
@@ -171,6 +115,7 @@ Screenshot placeholders are tracked in [assets/screenshots/README.md](assets/scr
 |   |-- playbooks/
 |   `-- infrastructure/
 |-- assets/
+|   |-- diagrams/
 |   `-- screenshots/
 |-- SECURITY.md
 `-- LICENSE

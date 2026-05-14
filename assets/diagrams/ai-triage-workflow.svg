@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">AI Triage Workflow</title>
+  <desc id="desc">Evidence-grounded AI assistance with policy guardrails and analyst control.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0 0 L12 6 L0 12 Z" fill="#94a3b8"/>
+    </marker>
+    <style>
+      .bg{fill:#070d1a}.title{font:700 46px Inter,Arial,sans-serif;fill:#f3f7ff}.sub{font:24px Inter,Arial,sans-serif;fill:#b9c4d6}
+      .box{fill:#101827;stroke-width:3}.red{stroke:#ff5570}.blue{stroke:#28aef7}.purple{stroke:#a65cf4}.green{stroke:#34df8e}.yellow{stroke:#ffc21a}
+      .head{font:700 24px Inter,Arial,sans-serif;fill:#f3f7ff}.body{font:20px Inter,Arial,sans-serif;fill:#bdc8da}.arrow{stroke:#94a3b8;stroke-width:4;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:14 18}.foot{font:16px Inter,Arial,sans-serif;fill:#aab6c8}
+    </style>
+  </defs>
+  <rect class="bg" width="1600" height="900"/>
+  <text class="title" x="60" y="86">AI Triage Workflow</text>
+  <text class="sub" x="60" y="120">Evidence-grounded AI assistance with policy guardrails and analyst control</text>
+
+  <rect class="box red" x="60" y="285" width="175" height="124" rx="18"/><text class="head" x="148" y="322" text-anchor="middle">Alert</text><text class="body" x="148" y="358" text-anchor="middle"><tspan x="148">New detection</tspan><tspan x="148" dy="24">triggered</tspan></text>
+  <rect class="box blue" x="295" y="285" width="175" height="124" rx="18"/><text class="head" x="383" y="322" text-anchor="middle">Context</text><text class="body" x="383" y="358" text-anchor="middle"><tspan x="383">Asset, user,</tspan><tspan x="383" dy="24">time window</tspan></text>
+  <rect class="box blue" x="530" y="285" width="175" height="124" rx="18"/><text class="head" x="618" y="322" text-anchor="middle">Evidence</text><text class="body" x="618" y="358" text-anchor="middle"><tspan x="618">Logs, timeline,</tspan><tspan x="618" dy="24">graph links</tspan></text>
+  <rect class="box purple" x="765" y="285" width="175" height="124" rx="18"/><text class="head" x="853" y="322" text-anchor="middle">AI Triage</text><text class="body" x="853" y="356" text-anchor="middle"><tspan x="853">Summarize</tspan><tspan x="853" dy="24">hypothesize</tspan><tspan x="853" dy="24">prioritize</tspan></text>
+  <rect class="box yellow" x="1000" y="285" width="175" height="124" rx="18"/><text class="head" x="1088" y="322" text-anchor="middle">Proposal</text><text class="body" x="1088" y="358" text-anchor="middle"><tspan x="1088">Recommendation</tspan><tspan x="1088" dy="24">+ rationale</tspan></text>
+  <rect class="box green" x="1235" y="285" width="175" height="124" rx="18"/><text class="head" x="1323" y="322" text-anchor="middle">Analyst</text><text class="body" x="1323" y="352" text-anchor="middle"><tspan x="1323">Review</tspan><tspan x="1323" dy="24">Decide</tspan><tspan x="1323" dy="24">Next steps</tspan></text>
+
+  <rect class="box yellow" x="378" y="585" width="285" height="124" rx="18"/><text class="head" x="521" y="625" text-anchor="middle">Guardrails</text><text class="body" x="521" y="660" text-anchor="middle"><tspan x="521">Evidence required</tspan><tspan x="521" dy="24">Confidence shown</tspan><tspan x="521" dy="24">No hidden actions</tspan></text>
+  <rect class="box yellow" x="906" y="585" width="285" height="124" rx="18"/><text class="head" x="1049" y="625" text-anchor="middle">Policy Boundary</text><text class="body" x="1049" y="660" text-anchor="middle"><tspan x="1049">AI cannot bypass</tspan><tspan x="1049" dy="24">OPA / Rego</tspan><tspan x="1049" dy="24">approval gates</tspan></text>
+
+  <path class="arrow" d="M235 347 H295"/><path class="arrow" d="M470 347 H530"/><path class="arrow" d="M705 347 H765"/><path class="arrow" d="M940 347 H1000"/><path class="arrow" d="M1175 347 H1235"/>
+  <path class="arrow" d="M853 409 L521 585"/>
+  <path class="arrow" d="M1088 409 L1049 585"/>
+  <path class="arrow dash" d="M1088 409 L1191 647"/>
+  <text class="foot" x="1190" y="875">Mini-XDR Showcase • sanitized portfolio architecture</text>
+</svg>
