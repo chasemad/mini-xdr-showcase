@@ -1,8 +1,12 @@
 # Mini-XDR Showcase
 
-Mini-XDR is a cybersecurity portfolio project demonstrating the architecture, detection logic, and response workflows behind an AI-assisted XDR/SIEM/SOAR platform.
+**Topics:** `cybersecurity` `xdr` `siem` `soar` `detection-engineering` `mitre-attack` `ai-security` `security-automation` `incident-response` `sigma-rules` `opentelemetry` `cloud-security`
+
+Mini-XDR is a sanitized cybersecurity portfolio project demonstrating the architecture, detection logic, and response workflows behind an AI-assisted XDR/SIEM/SOAR platform.
 
 This repository is designed for recruiters and technical interviewers. It highlights system design, detection engineering, cloud security monitoring, AI-assisted triage, and policy-governed response workflows without exposing private source code, secrets, or sensitive implementation details.
+
+Next iteration: [ACRO Showcase](https://github.com/chasemad/acro-security-platform) expands the core Mini-XDR concepts into a broader policy-governed autonomous response architecture.
 
 ## What This Demonstrates
 
