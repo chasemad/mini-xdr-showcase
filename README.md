@@ -6,6 +6,8 @@ Mini-XDR is a sanitized cybersecurity portfolio project demonstrating the archit
 
 This repository is designed for recruiters and technical interviewers. It highlights system design, detection engineering, cloud security monitoring, AI-assisted triage, and policy-governed response workflows without exposing private source code, secrets, or sensitive implementation details.
 
+> **Development note:** Mini-XDR was built as a hands-on cybersecurity project with AI-assisted development using Claude. I designed the architecture and workflows, guided implementation, reviewed and tested the code, troubleshot issues, and validated the detection and response functionality.
+
 Next iteration: [ACRO Showcase](https://github.com/chasemad/acro-showcase) expands the core Mini-XDR concepts into a broader policy-governed autonomous response architecture.
 
 ## What This Demonstrates
