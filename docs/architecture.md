@@ -1,5 +1,7 @@
 # Architecture
 
+> **Scope:** Reference design for the broader Mini-XDR concept. The complete multi-source architecture below is not presented as an independently validated live deployment. For the historically tested Cowrie detection/response workflow, see [implementation and validation status](validation-status.md).
+
 Mini-XDR is represented here as a three-plane security platform: data plane, control plane, and reasoning plane. The separation is intentional. High-volume telemetry moves through the data plane, tenant and workflow state stays in the control plane, and AI-assisted analysis operates through a mediated reasoning plane.
 
 ## Data Plane
