@@ -44,7 +44,7 @@ For a technical reviewer, start here:
 
 1. Read [implementation & validation status](docs/validation-status.md) to distinguish tested functionality from design examples.
 2. Review this README for the project overview.
-4. Review [docs/architecture.md](docs/architecture.md) for the control plane, data plane, and reasoning plane design.
+3. Review [docs/architecture.md](docs/architecture.md) for the control plane, data plane, and reasoning plane design.
 4. Review [docs/detection-pipeline.md](docs/detection-pipeline.md) for detection logic, normalized events, and Sigma-style examples.
 5. Review [docs/ai-workflow.md](docs/ai-workflow.md) for the AI-assisted triage boundary.
 6. Review [docs/soar-governance.md](docs/soar-governance.md) for policy-gated response workflows.
