@@ -1,6 +1,8 @@
 # AI-Assisted Triage Workflow
 
-Mini-XDR uses AI as an investigation assistant, not as an unrestricted response engine. The AI workflow is evidence-grounded, policy-mediated, and audit-friendly.
+> **Scope:** This document describes a proposed/experimental AI-assisted investigation workflow and safety boundary. It is not proof that all agent capabilities, model integrations, or approval controls ran end to end. See [validation status](validation-status.md).
+
+The Mini-XDR design treats AI as an investigation assistant, not as an unrestricted response engine. The AI workflow is evidence-grounded, policy-mediated, and audit-friendly.
 
 ## AI Boundary
 
