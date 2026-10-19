@@ -1,23 +1,28 @@
 # Mini-XDR Showcase
 
-**Topics:** `cybersecurity` `xdr` `siem` `soar` `detection-engineering` `mitre-attack` `ai-security` `security-automation` `incident-response` `sigma-rules` `opentelemetry` `cloud-security`
+Mini-XDR is an independent **security monitoring, incident investigation, and response lab**. Its strongest demonstrated use case is a controlled Cowrie SSH honeypot workflow: suspicious authentication activity enters a monitoring application, generates investigation records, and can lead to application-reported firewall-based IP containment.
 
-Mini-XDR is a sanitized cybersecurity portfolio project demonstrating the architecture, detection logic, and response workflows behind an AI-assisted XDR/SIEM/SOAR platform.
+This repository is a **sanitized technical case study**, not a production security service or a claim that every architecture diagram and interface feature was deployed. The sample detections, diagrams, policies, and screenshots help explain additional design ideas.
 
-This repository is designed for recruiters and technical interviewers. It highlights system design, detection engineering, cloud security monitoring, AI-assisted triage, and policy-governed response workflows without exposing private source code, secrets, or sensitive implementation details.
+> **Start here:** [Implementation & validation status](docs/validation-status.md) distinguishes historically tested lab behavior, illustrative designs, development responsibilities, and evidence limitations.
 
-> **Development note:** Mini-XDR was built as a hands-on cybersecurity project with AI-assisted development using Claude. I designed the architecture and workflows, guided implementation, reviewed and tested the code, troubleshot issues, and validated the detection and response functionality.
+## Hands-On Lab Work
 
-Next iteration: [ACRO Showcase](https://github.com/chasemad/acro-showcase) expands the core Mini-XDR concepts into a broader policy-governed autonomous response architecture.
+In a controlled environment, I configured and exercised:
 
-## What This Demonstrates
+- **Cowrie SSH honeypot testing:** Generated and observed suspicious authentication activity.
+- **Security monitoring and investigation:** Viewed collected event details, detections, and generated incident records in an analyst-facing application.
+- **Response workflow testing:** Tested IP block/unblock actions and reviewed application-reported UFW containment and action history.
 
-- Security architecture for telemetry ingestion, detection, investigation, response, and auditability
-- SIEM and detection engineering using Sigma-style rules, normalized events, severity mapping, and MITRE ATT&CK alignment
-- AI-assisted triage workflows where AI supports analysis but does not bypass deterministic policy controls
-- Cloud security pipeline design using collectors, event streaming, hot analytics, relational control data, object storage, and graph-based investigation
-- SOAR-style response governance with approval gates, rollback planning, and audit trails
-- Product and engineering judgment through documented tradeoffs, non-goals, and roadmap boundaries
+These are historical hands-on test observations; this public showcase does not independently reproduce or verify the underlying private application today. The response UI and logged outcomes should not be mistaken for independent host-level firewall verification.
+
+## Broader Designs and Examples
+
+The repository also explores normalized multi-source telemetry, Sigma-style detection logic, SIEM/SOAR-style architecture, AI-assisted triage, policy-gated response, audit trails, and cloud monitoring concepts. **Those materials are architectural illustrations or sanitized examples unless specifically identified as tested.**
+
+## Development Approach
+
+I planned the requirements, architecture, workflows, and tests, and directed implementation with **Claude and Cursor for coding and code-level debugging**. I personally worked with the lab, tested application behavior, identified issues, and guided subsequent fixes and retesting. This is different from claiming that I independently authored all the source code.
 
 ## What This Repository Does Not Include
 
@@ -27,9 +32,9 @@ Next iteration: [ACRO Showcase](https://github.com/chasemad/acro-showcase) expan
 - Proprietary orchestration internals
 - Claims of formal compliance certification
 
-All examples use sanitized demo data, fake tenants, fake assets, and documentation-only workflows.
+Public example events and policy artifacts use synthetic data. Screenshots use sanitized demonstration content; they are not evidence that every pictured component or integration was operating live.
 
-## Architecture Overview
+## Architecture Overview (Reference Design)
 
 ![Mini-XDR reference architecture](assets/diagrams/reference-architecture.svg)
 
@@ -37,14 +42,18 @@ All examples use sanitized demo data, fake tenants, fake assets, and documentati
 
 For a technical reviewer, start here:
 
-1. Read this README for the project overview.
-2. Review [docs/architecture.md](docs/architecture.md) for the control plane, data plane, and reasoning plane design.
-3. Review [docs/detection-pipeline.md](docs/detection-pipeline.md) for detection logic, normalized events, and Sigma-style examples.
-4. Review [docs/ai-workflow.md](docs/ai-workflow.md) for the AI-assisted triage boundary.
-5. Review [docs/soar-governance.md](docs/soar-governance.md) for policy-gated response workflows.
-6. Review [docs/lessons-learned.md](docs/lessons-learned.md) for tradeoffs, design decisions, and future improvements.
+1. Read [implementation & validation status](docs/validation-status.md) to distinguish tested functionality from design examples.
+2. Review this README for the project overview.
+4. Review [docs/architecture.md](docs/architecture.md) for the control plane, data plane, and reasoning plane design.
+4. Review [docs/detection-pipeline.md](docs/detection-pipeline.md) for detection logic, normalized events, and Sigma-style examples.
+5. Review [docs/ai-workflow.md](docs/ai-workflow.md) for the AI-assisted triage boundary.
+6. Review [docs/soar-governance.md](docs/soar-governance.md) for policy-gated response workflows.
+7. Review [docs/lessons-learned.md](docs/lessons-learned.md) for tradeoffs, design decisions, and future improvements.
 
-## Feature Areas
+## Architecture and Interface Areas (Illustrative Scope)
+
+These entries describe documented workflows and sanitized UI examples; they are **not** an inventory of independently validated live integrations.
+
 
 | Area | What It Shows |
 | --- | --- |
@@ -93,6 +102,9 @@ For a technical reviewer, start here:
 <a href="diagrams/aws-reference-architecture.md"><img src="assets/diagrams/aws-style-reference-architecture.svg" alt="AWS-style reference architecture" width="100%"></a>
 
 ## Screenshots
+
+Screenshots are sanitized demonstrations. Some show experimental or designed interfaces that do not establish a working external integration, trained-model accuracy, or completed response action. See [validation status](docs/validation-status.md).
+
 
 Screenshot guidance is tracked in [assets/screenshots/README.md](assets/screenshots/README.md). Click any image below to open the full-size version.
 
@@ -153,7 +165,7 @@ Mini-XDR is built around a simple principle:
 
 AI can assist investigation, but deterministic controls must govern response.
 
-Key safeguards include:
+The examples and design explore safeguards including:
 
 - Tenant context on every event, query, finding, and action proposal
 - AI responses grounded in evidence, confidence, expected impact, and rollback notes
@@ -161,7 +173,10 @@ Key safeguards include:
 - Response workflows designed to suggest, simulate, approve, execute, verify, and audit
 - Public examples limited to synthetic data and sanitized documentation
 
-## Technologies Represented
+## Technologies Represented in Examples and Design
+
+Listing a technology here does not imply it was integrated into the tested Cowrie-to-response lab.
+
 
 | Category | Technologies / Concepts |
 | --- | --- |
@@ -188,4 +203,4 @@ The strongest design choice was separating deterministic control from probabilis
 
 ## Status
 
-This is a public portfolio showcase. It is intentionally documentation-first and sanitized. The private implementation remains separate.
+This is a documentation-first, sanitized portfolio case study that includes historical controlled-lab testing and broader architectural exploration. The private application is not supplied for independent reproduction in this repository. Read [implementation & validation status](docs/validation-status.md) for evidence boundaries and next verification steps.
