@@ -22,7 +22,7 @@ The repository also explores normalized multi-source telemetry, Sigma-style dete
 
 ## Development Approach
 
-I planned the requirements, architecture, workflows, and tests, and directed implementation with **Claude and Cursor for coding and code-level debugging**. I personally worked with the lab, tested application behavior, identified issues, and guided subsequent fixes and retesting. This is different from claiming that I independently authored all the source code.
+I planned the requirements, architecture, workflows, and tests, and directed implementation with **Claude and Cursor for coding and code-level debugging**. I personally worked with the lab, tested application behavior, identified issues, and guided subsequent fixes and retesting.
 
 ## What This Repository Does Not Include
 
