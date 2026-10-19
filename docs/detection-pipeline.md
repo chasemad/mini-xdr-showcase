@@ -1,5 +1,7 @@
 # Detection Pipeline
 
+> **Scope:** The multi-source pipeline and normalized examples below document a target architecture and synthetic detection artifacts. The historical hands-on test centered on Cowrie authentication events and incident/response behavior; do not assume every listed source was live. See [validation status](validation-status.md).
+
 The detection pipeline shows how Mini-XDR turns raw telemetry into prioritized findings. The examples in this repository use synthetic events and Sigma-style rules to demonstrate the approach without exposing private detection content.
 
 ## Flow
