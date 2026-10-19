@@ -1,6 +1,8 @@
 # SOAR Governance
 
-Mini-XDR represents SOAR response as a governed workflow, not a direct automation shortcut. This matters because containment actions can disrupt business systems if executed without context.
+> **Scope:** Illustrative response-governance design, not proof of a deployed policy engine or complete SOAR implementation. The controlled lab exercised IP block/unblock and application-reported UFW results; see [validation status](validation-status.md).
+
+The broader Mini-XDR architecture models SOAR response as a governed workflow, not a direct automation shortcut. This matters because containment actions can disrupt business systems if executed without context.
 
 ## Workflow Lifecycle
 
